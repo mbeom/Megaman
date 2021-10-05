@@ -12,9 +12,12 @@ private:
 	bitset<KEYMAX> _keyUp;
 	bitset<KEYMAX> _keyDown;
 
-public:
 	keyManager();
 	~keyManager();
+
+	friend singletonBase;
+
+public:
 
 	HRESULT init();
 	void release();

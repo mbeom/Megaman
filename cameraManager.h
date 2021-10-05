@@ -12,10 +12,12 @@ private:
 	int camera_x, camera_y;			// 우리가 캡쳐할 화면
 	Player* _player;
 
-public:
-
 	cameraManager();
 	~cameraManager();
+
+	friend singletonBase;
+
+public:
 
 	HRESULT init(int width, int height);
 	void release();

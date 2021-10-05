@@ -14,9 +14,12 @@ private:
 private:
 	mapImageList _mImageList;
 
-public:
 	imageManager();
 	~imageManager();
+
+	friend singletonBase;
+
+public:
 
 	HRESULT init();
 	void release();
